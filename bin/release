@@ -3,4 +3,5 @@
 cat << EOF
 ---
 config_vars:
+  C_INCLUDE_PATH=$C_INCLUDE_PATH:$TARGET_DIR/include
 EOF

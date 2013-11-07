@@ -17,4 +17,4 @@ cd $BUILD_DIR
 
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TARGET_DIR/include
 
-echo "-----> id3lib available at ${CACHE_DIR}/lib"
+echo "-----> id3lib available at $TARGET_DIR/include (`env C_INCLUDE_PATH`)"
