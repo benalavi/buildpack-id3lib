@@ -9,7 +9,7 @@ echo "-----> Using id3lib buildpack ($BUILD_DIR) ($CACHE_DIR)"
 mkdir -p $TARGET_DIR
 cd $TARGET_DIR
 
-set -o pipefail; curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 20 https://s3.amazonaws.com/buildpack-id3lib/id3lib-3.8.3.tgz -s -o - | tar zxf -
+set -o pipefail; curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 20 https://s3.amazonaws.com/buildpack-id3lib/id3lib-3.8.3.tgz -o - | tar zxf -
 
 cp -R $TARGET_DIR $CACHE_DIR
 
