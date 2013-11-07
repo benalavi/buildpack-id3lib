@@ -1,2 +1,5 @@
-echo "id3lib (by force!)"
+#!/usr/bin/env bash
+
+# If the buildpack is here then assume it's meant to be run
+echo "id3lib"
 exit 0
