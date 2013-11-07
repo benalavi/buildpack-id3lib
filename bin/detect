@@ -1,2 +1,2 @@
-echo "-----> Installing id3lib (by force!)"
+echo "id3lib (by force!)"
 exit 0
