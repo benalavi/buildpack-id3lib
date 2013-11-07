@@ -1,0 +1,2 @@
+echo "-----> Installing id3lib (by force!)"
+exit 0

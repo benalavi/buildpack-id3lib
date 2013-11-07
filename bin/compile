@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+echo "-----> Using id3lib buildpack ($BUILD_DIR) ($CACHE_DIR)"
+
+curl https://s3.amazonaws.com/buildpack-id3lib/id3lib-3.8.3.tgz -s -o - | tar -xvf -C $BUILD_DIR/id3lib-3.8.3 -
+
+cp -R $BUILD_DIR/id3lib-3.8.3 $CACHE_DIR
+
+echo "-----> id3lib available at ${CACHE_DIR}/lib"
