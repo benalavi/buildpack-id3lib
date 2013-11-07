@@ -13,4 +13,8 @@ set -o pipefail; curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max
 
 cp -R $TARGET_DIR $CACHE_DIR
 
+cd $BUILD_DIR
+
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TARGET_DIR/include
+
 echo "-----> id3lib available at ${CACHE_DIR}/lib"

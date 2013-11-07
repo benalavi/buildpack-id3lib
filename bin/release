@@ -3,5 +3,4 @@
 cat << EOF
 ---
 config_vars:
-  LIBRARY_PATH: $LIBRARY_PATH:/app/tmp/repo.git/.cache/id3lib-3.8.3/lib
 EOF
