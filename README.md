@@ -10,6 +10,20 @@ Add https://github.com/benalavi/buildpack-id3lib.git to your `.buildpacks` (befo
 
 Now your other buildpacks (say ruby) should be able to compile against id3lib
 
+Testing
+=======
+
+`ruby test/id3lib_test.rb`
+
+Or, if you don't have the necessary dependencies and would like to run a VM (via Vagrant) with them installed for you:
+
+```
+vagrant up
+vagrant ssh
+cd /vagrant
+ruby test/id3lib_test.rb
+```
+
 id3lib 3.8.3 package
 --------------------
 
