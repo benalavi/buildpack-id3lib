@@ -1,4 +1,7 @@
-warn "Set HEROKU_API_KEY to your heroku API key (heroku auth:token) (https://github.com/heroku/hatchet)" and exit 10 unless ENV["HEROKU_API_KEY"]
+unless ENV["HEROKU_API_KEY"]
+  warn "Set HEROKU_API_KEY to your heroku API key (heroku auth:token) (https://github.com/heroku/hatchet)"
+  exit 10
+end
 
 require "minitest/autorun"
 require "hatchet"
