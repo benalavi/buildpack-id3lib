@@ -14,11 +14,13 @@ mkdir -p $BUILD_DIR $BUILD_DIR/.profile.d $CACHE_DIR $TARGET_DIR
 cd $TARGET_DIR
 curl --fail --retry 3 --retry-delay 1 --connect-timeout 3 --max-time 20 https://s3.amazonaws.com/buildpack-id3lib/id3lib-3.8.3.tgz -s -o - | tar zxf -
 
-echo "-----> Setting environment for id3lib"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$APP_DIR/lib:$TARGET_DIR/lib
-export LIBRARY_PATH=$LIBRARY_PATH:$APP_DIR/lib:$TARGET_DIR/lib
-export CPPPATH=$CPPPATH:$APP_DIR/include:$TARGET_DIR/include
-export CPATH=$CPATH:$APP_DIR/include:$TARGET_DIR/include
+echo "-----> Building runtime environment"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$TARGET_DIR/lib"
+export LIBRARY_PATH="$LIBRARY_PATH:$TARGET_DIR/lib"
+export CPPPATH="$CPPPATH:$TARGET_DIR/include"
+export CPATH="$CPATH:$TARGET_DIR/include"
+
+env
 
 cat <<EOF > $BUILD_DIR/.profile.d/id3lib.sh
 export LD_LIBRARY_PATH="\$LD_LIBRARY_PATH:$APP_DIR/lib"
