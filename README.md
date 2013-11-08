@@ -1,8 +1,17 @@
 Buildpack (Heroku, CloudFoundry, Dokku, etc.) that just installs id3lib. Most
 likely use with heroku-buildpack-multi to actually build a stack.
 
-Build Steps
-===========
+Usage
+=====
+
+Set your buildpack to https://github.com/ddollar/heroku-buildpack-multi.git (https://github.com/ddollar/heroku-buildpack-multi)
+
+Add https://github.com/benalavi/buildpack-id3lib.git to your `.buildpacks` (before anything that depends on id3lib)
+
+Now your other buildpacks (say ruby) should be able to compile against id3lib
+
+id3lib 3.8.3 package
+--------------------
 
 Used to build id3lib 3.8.3 package that this buildpack uses (https://s3.amazonaws.com/buildpack-id3lib/id3lib-3.8.3.tgz):
 
