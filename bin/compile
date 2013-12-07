@@ -6,8 +6,8 @@ BIN_DIR=$(dirname $0)
 ROOT_DIR=`cd $(dirname $0); cd ..; pwd`
 BUILD_DIR=$1
 CACHE_DIR=$2
-TARGET_DIR="$BUILD_DIR/local"
-APP_DIR=/app/local
+TARGET_DIR="$BUILD_DIR/vendor/id3lib"
+APP_DIR=/app/vendor/id3lib
 
 echo "-----> Installing id3lib"
 mkdir -p $BUILD_DIR $BUILD_DIR/.profile.d $CACHE_DIR $TARGET_DIR
