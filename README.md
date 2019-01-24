@@ -1,3 +1,11 @@
+**THIS IS OUTDATED -- install libid3-dev using the Apt buildpack if needed**
+
+https://github.com/heroku/heroku-buildpack-apt
+
+Add `libid3-dev` to `Aptfile`
+
+**OLD README**
+
 Heroku buildpack that just installs id3lib.
 
 Usage
